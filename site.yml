@@ -1,0 +1,9 @@
+---
+- hosts: all
+  sudo: yes
+  roles:
+    - common
+    - nodejs
+    - bower
+    - pixi.js
+    - nginx

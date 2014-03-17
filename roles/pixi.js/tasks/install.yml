@@ -1,0 +1,4 @@
+---
+- name: install the pixi.js
+  sudo: false
+  shell: bower install pixi.js chdir={{ bower_package_dir }}

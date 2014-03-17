@@ -1,0 +1,3 @@
+---
+- name: install the bower
+  npm: name=bower global=yes state=present

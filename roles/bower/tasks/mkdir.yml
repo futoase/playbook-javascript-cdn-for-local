@@ -1,0 +1,3 @@
+---
+- name: mkdir the bower
+  file: path={{ bower_package_dir }} state=directory mode=0777

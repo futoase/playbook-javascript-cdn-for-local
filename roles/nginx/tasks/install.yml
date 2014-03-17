@@ -1,0 +1,9 @@
+---
+- name: install the nginx from nginx.repo
+  yum: name=nginx enablerepo=nginx state=present
+
+- name: remove files of default for the nginx
+  shell: rm -rf "/etc/nginx/conf.d/{{ item }}.conf"
+  with_items:
+    - default
+    - example_ssl

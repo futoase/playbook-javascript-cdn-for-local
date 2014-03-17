@@ -1,0 +1,6 @@
+---
+- name: retrieve nodejs for the yum packages from epel
+  yum: name={{ item }} enablerepo=epel
+  with_items:
+    - nodejs
+    - npm

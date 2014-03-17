@@ -1,0 +1,7 @@
+---
+- name: copy config file destination to /etc/nginx/conf.d/
+  copy: src={{ item }}.conf dest=/etc/nginx/conf.d/{{ item }}.conf
+  with_items:
+    - bower
+    - host
+  notify: restart nginx
